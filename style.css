@@ -154,3 +154,64 @@ main {
 .news-source {
     margin-block: 12px;
 }
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.news-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .news-item {
+        padding: 10px;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 900px) {
+    .news-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .news-item img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 901px) {
+    .news-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .news-item img {
+        max-width: 200px;
+        margin-right: 20px;
+    }
+
+    .news-item-content {
+        flex: 1;
+    }
+}
